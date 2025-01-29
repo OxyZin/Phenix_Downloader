@@ -2,21 +2,25 @@
     {
         "title": "The Legend of Zelda: Twilight Princess",
         "console": "Nintendo Wii",
-        "downloadlink": "https://example.com/zelda-wii.iso"
+        "downloadlink": "https://example.com/zelda-wii.iso",
+        "image": "https://example.com/images/zelda-wii.jpg"
     },
     {
         "title": "Resident Evil 4",
         "console": "Nintendo GameCube",
-        "downloadlink": "https://example.com/re4-gc.iso"
+        "downloadlink": "https://example.com/re4-gc.iso",
+        "image": "https://example.com/images/re4-gc.jpg"
     },
     {
         "title": "Gran Turismo 4",
         "console": "PlayStation 2",
-        "downloadlink": "https://example.com/gt4-ps2.iso"
+        "downloadlink": "https://example.com/gt4-ps2.iso",
+        "image": "https://example.com/images/gt4-ps2.jpg"
     },
     {
         "title": "Sonic CD",
         "console": "Sega CD",
-        "downloadlink": "https://example.com/soniccd-segacd.iso"
+        "downloadlink": "https://example.com/soniccd-segacd.iso",
+        "image": "https://example.com/images/soniccd-segacd.jpg"
     }
 ]
