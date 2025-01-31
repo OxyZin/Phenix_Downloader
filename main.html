@@ -56,6 +56,7 @@
         }
         .game-card p {
             color: #aaa;
+            margin: 5px 0;
         }
         .game-card img {
             width: 100%;
@@ -78,7 +79,7 @@
     </style>
 </head>
 <body>
-    <header>Phenix Launcher</header>
+    <header>Phenix Launcher V0.1 Rev 3</header>
     <div class="container">
         <div class="filters">
             <select id="consoleFilter">
@@ -90,11 +91,8 @@
             </select>
             <input type="text" id="searchInput" placeholder="Search for a game...">
         </div>
-        <div class="games" id="gamesList">
-            <!-- Game cards will be dynamically inserted here -->
-        </div>
+        <div class="games" id="gamesList"></div>
     </div>
-
     <script>
         const gamesList = document.getElementById('gamesList');
         const consoleFilter = document.getElementById('consoleFilter');
@@ -102,7 +100,7 @@
 
         async function fetchGames() {
             try {
-                const response = await fetch('https://raw.githubusercontent.com/OxyZin/Phenix_Downloader/refs/heads/main/gamelist.json'); // Substitua pela URL real
+                const response = await fetch('https://raw.githubusercontent.com/OxyZin/Phenix_Downloader/refs/heads/main/gamelist.json');
                 const games = await response.json();
                 renderGames(games);
             } catch (error) {
@@ -129,7 +127,9 @@
                     gameCard.innerHTML = `
                         <img src="${game.image}" alt="${game.title}">
                         <h3>${game.title}</h3>
-                        <p>${game.console}</p>
+                        <p><strong>Console:</strong> ${game.console}</p>
+                        <p><strong>Região:</strong> ${game.region}</p>
+                        <p><strong>Tamanho:</strong> ${game.size}</p>
                         <button class="launch-button" onclick="window.open('${game.downloadlink}', '_blank')">Download</button>
                     `;
                     gamesList.appendChild(gameCard);
@@ -141,7 +141,6 @@
 
         consoleFilter.addEventListener('change', fetchGames);
         searchInput.addEventListener('input', fetchGames);
-
         fetchGames();
     </script>
 </body>
