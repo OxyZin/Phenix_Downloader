@@ -5,7 +5,7 @@ import urllib.parse
 import re
 
 # URL do site
-BASE_URL = "https://myrient.erista.me/files/Redump/Nintendo%20-%20Wii%20-%20NKit%20RVZ%20%5Bzstd-19-128k%5D/"
+BASE_URL = "INSIRA SUA URL AQUIII"
 
 # Fazendo a requisição HTTP
 try:
